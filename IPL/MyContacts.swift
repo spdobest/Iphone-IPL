@@ -7,6 +7,11 @@
 //
 
 import Foundation
-struct MyContacts :Codable{
-     let contacts:[Contacts]?
+struct MyContacts :Decodable{
+     let contacts:[Contacts]
+    
+    enum CodingKeys : String, CodingKey {
+        case contacts = "contacts"
+    }
+    
 }

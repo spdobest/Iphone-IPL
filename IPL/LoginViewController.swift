@@ -43,9 +43,11 @@ class LoginViewController: BaseViewController {
         
         view.addSubview(myActivityIndicator)
         
-       // doNetworkCall(url:"asdasdas")
-        parse()
-
+       //  performSegue(withIdentifier: "loginSegue", sender: self)
+        
+      //   doNetworkCall(url:"asdasdas")
+//        parse()
+//parseContact()
     }
 
     override func didReceiveMemoryWarning() {
@@ -97,7 +99,7 @@ class LoginViewController: BaseViewController {
                     }
                 }
                 
-                performSegue(withIdentifier: "loginSegue", sender: self)
+               
                 
             }
          //   myActivityIndicator.startAnimating()
@@ -105,8 +107,8 @@ class LoginViewController: BaseViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        var welcomeVc = segue.destination as! HomeUIViewController
-        welcomeVc.myValue = "Sibaprasad"
+    //    let welcomeVc = segue.destination as! HomeUIViewController
+       //  welcomeVc.myValue = "Sibaprasad"
     }
     
     @IBAction func onSegmentChange(_ sender: AnyObject) {
@@ -137,7 +139,7 @@ class LoginViewController: BaseViewController {
                 do {
                     let decoder = JSONDecoder()
                     let gitData = try decoder.decode(MyContacts.self, from: responseData.result.value as! Data)
-                    print(gitData.contacts![0])
+                    print(gitData.contacts[0].address)
                     
                 } catch let err {
                     print("Err", err)
@@ -157,47 +159,47 @@ class LoginViewController: BaseViewController {
     }
     func parse(){
         
-        guard let gitUrl = URL(string: "https://api.github.com/users/"+"shashikant86" ) else { return }
-        
+        var urlGit = "https://api.github.com/users/spdobest"
+        guard let gitUrl = URL(string: "https://api.github.com/users/shashikant86") else { return }
         URLSession.shared.dataTask(with: gitUrl) { (data, response
             , error) in
-            
             guard let data = data else { return }
             do {
-                
                 let decoder = JSONDecoder()
                 let gitData = try decoder.decode(MyGitHub.self, from: data)
-                
-                print(gitData.location)
-                
-                DispatchQueue.main.sync {
-                    if let gimage = gitData.avatarUrl {
-                        let data = try? Data(contentsOf: gimage)
-                        let image: UIImage = UIImage(data: data!)!
-                      //  self.gravatarImage.image = image
-                    }
-                    
-                    
-//                    if let gname = gitData.name {
-//                        self.name.text = gname
-//                    }
-//                    if let glocation = gitData.location {
-//                        self.location.text = glocation
-//                    }
-//
-//                    if let gfollowers = gitData.followers {
-//                        self.followers.text = String(gfollowers)
-//                    }
-//
-//                    if let grepos = gitData.repos {
-//                        self.blog.text = String(grepos)
-//                    }
-//                    self.setLabelStatus(value: false)
-                }
+                print(gitData.name!)
                 
             } catch let err {
                 print("Err", err)
             }
+            }.resume()
+    }
+    
+    func parseContact(){
+        
+        var urlContacts = "http://roadfiresoftware.com/feed/json"
+        guard let gitUrl = URL(string: urlContacts) else { return }
+        URLSession.shared.dataTask(with: gitUrl) { (data, response
+            , error) in
+            
+            guard let data = data else {
+                print("Error: No data to decode")
+                return
+            }
+            
+            guard let blog = try? JSONDecoder().decode(Blog.self, from: data) else {
+                print("Error: Couldn't decode data into Blog")
+                return
+            }
+            
+            print("blog title: \(blog.title)")
+            print("blog home: \(blog.homepageURL)")
+            
+            print("articles:")
+            for article in blog.articles {
+                print("- \(article.title)")
+            }
+            
             }.resume()
     }
     
