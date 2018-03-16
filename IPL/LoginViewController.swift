@@ -8,7 +8,7 @@
 //
 
 import UIKit
-import Alamofire
+
 
 
 
@@ -43,7 +43,7 @@ class LoginViewController: BaseViewController {
         
         view.addSubview(myActivityIndicator)
         
-       //  performSegue(withIdentifier: "loginSegue", sender: self)
+       
         
       //   doNetworkCall(url:"asdasdas")
 //        parse()
@@ -89,15 +89,15 @@ class LoginViewController: BaseViewController {
             self.view.addSubview(progressHud)
             progressHud.show()
             if loginType == SIGNUP {
-                Alamofire.request("https://api.androidhive.info/contacts/").response { response in
-                    print("Request: \(response.request)")
-                    print("Response: \(response.response)")
-                    print("Error: \(response.error)")
-
-                    if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
-                        print("Data: \(utf8Text)")
-                    }
-                }
+//                Alamofire.request("https://api.androidhive.info/contacts/").response { response in
+//                    print("Request: \(response.request)")
+//                    print("Response: \(response.response)")
+//                    print("Error: \(response.error)")
+//
+//                    if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+//                        print("Data: \(utf8Text)")
+//                    }
+//                }
                 
                
                 
@@ -107,8 +107,18 @@ class LoginViewController: BaseViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    //    let welcomeVc = segue.destination as! HomeUIViewController
-       //  welcomeVc.myValue = "Sibaprasad"
+        
+        switch segue.identifier {
+        case "article"?:
+            let welcomeVc = segue.destination as! ArticleViewController
+           // welcomeVc.myValue = "Sibaprasad"
+        case "asd"?:
+            print("adasdas")
+        default :
+            print("default")
+        }
+        
+       
     }
     
     @IBAction func onSegmentChange(_ sender: AnyObject) {
@@ -117,6 +127,9 @@ class LoginViewController: BaseViewController {
             loginType = SIGNIN
             textFieldName.isHidden = true
             buttonSignIn.setTitle("Sign In",for: .normal)
+            
+            performSegue(withIdentifier: "article", sender: self)
+            
         case 1:
             loginType = SIGNUP
             textFieldName.isHidden = false
@@ -128,35 +141,35 @@ class LoginViewController: BaseViewController {
     }
     
     
-    func doNetworkCall(url:String)  {
-        
-        Alamofire.request("http://api.androidhive.info/contacts/").responseJSON { (responseData) -> Void in
-            if((responseData.result.value) != nil) {
-                
-                print("Result ",responseData.result.value)
-                
-                
-                do {
-                    let decoder = JSONDecoder()
-                    let gitData = try decoder.decode(MyContacts.self, from: responseData.result.value as! Data)
-                    print(gitData.contacts[0].address)
-                    
-                } catch let err {
-                    print("Err", err)
-                }
-                
-                //                let swiftyJsonVar = JSON(responseData.result.value!)
-                //
-                //                if let resData = swiftyJsonVar["contacts"].arrayObject {
-                //                    self.arrRes = resData as! [[String:AnyObject]]
-                //                }
-                //                if self.arrRes.count > 0 {
-                //                    self.netTableView.reloadData()
-                //                }
-        
-            }
-        }
-    }
+//    func doNetworkCall(url:String)  {
+//        
+//        Alamofire.request("http://api.androidhive.info/contacts/").responseJSON { (responseData) -> Void in
+//            if((responseData.result.value) != nil) {
+//
+//                print("Result ",responseData.result.value)
+//
+//
+//                do {
+//                    let decoder = JSONDecoder()
+//                    let gitData = try decoder.decode(MyContacts.self, from: responseData.result.value as! Data)
+//                    print(gitData.contacts[0].address)
+//
+//                } catch let err {
+//                    print("Err", err)
+//                }
+//
+//                                let swiftyJsonVar = JSON(responseData.result.value!)
+//
+//                                if let resData = swiftyJsonVar["contacts"].arrayObject {
+//                                    self.arrRes = resData as! [[String:AnyObject]]
+//                                }
+//                                if self.arrRes.count > 0 {
+//                                    self.netTableView.reloadData()
+//                                }
+//
+//            }
+//        }
+//    }
     func parse(){
         
         var urlGit = "https://api.github.com/users/spdobest"
