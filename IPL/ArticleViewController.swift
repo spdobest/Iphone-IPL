@@ -8,16 +8,12 @@
 
 import Foundation
 import UIKit
-class ArticleViewController : BaseViewController{
+class ArticleViewController : BaseViewController {
     
     @IBOutlet weak var myTable: UITableView!
     
     
      var articles:[Article] = []
-    var commonutility = CommonUtility()
-    var progressHud : ProgressHUD!
-    var myActivityIndicator: UIActivityIndicatorView!
-    
     
     override func viewDidLoad() {
         //  labelMessage.text = myValue
@@ -37,6 +33,8 @@ class ArticleViewController : BaseViewController{
         
 //        self.view.addSubview(progressHud)
 //        progressHud.show()
+        
+        showProgressDialog("Loading")
         
         let urlContacts = "http://roadfiresoftware.com/feed/json"
         guard let gitUrl = URL(string: urlContacts) else { return }
@@ -62,7 +60,7 @@ class ArticleViewController : BaseViewController{
             for article in blog.articles {
                 print("- \(article.title)")
             }
-             self.myTable.reloadData()
+           //  self.myTable.reloadData()
             DispatchQueue.main.async {
                 self.myTable.reloadData()
             }
@@ -72,6 +70,10 @@ class ArticleViewController : BaseViewController{
             }.resume()
     }
     
+   
+    
+}
+extension ArticleViewController : UITableViewDataSource {
     /**
      ALL TABLE VIEW RELATED METHODS`
      */
@@ -80,12 +82,26 @@ class ArticleViewController : BaseViewController{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCellStyle.default,reuseIdentifier: "myCell") as! ArticleTableViewCell
         
-            cell.labelTitle.text = self.articles[indexPath.row].title
-         cell.labelDesc.text = self.articles[indexPath.row].id
+        //        let cell = tableView .dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! ArticleTableViewCell
+        //
+        let cell : ArticleTableViewCell! = tableView.dequeueReusableCell(withIdentifier: "myCell") as? ArticleTableViewCell
+        
+        // [tableView, dequeueReusableCell(withIdentifier: "myCell", for: indexPath)] as! ArticleTableViewCell
+        
+        // UITableViewCell(style: UITableViewCellStyle.default,reuseIdentifier: "myCell") as! ArticleTableViewCell
+        
+        
+        cell.labelTitle.text = self.articles[indexPath.row].title
+        cell.labelDesc.text = self.articles[indexPath.row].id
         
         return cell
     }
-    
 }
+
+extension ArticleViewController : UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 96
+    }
+}
+

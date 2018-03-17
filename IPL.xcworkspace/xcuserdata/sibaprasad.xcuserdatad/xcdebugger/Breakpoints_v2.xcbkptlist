@@ -166,15 +166,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IPL/ArticleViewController.swift"
-            timestampString = "542862321.495331"
+            timestampString = "542966683.828277"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "parseBlog()"
             landmarkType = "7">
          </BreakpointContent>
@@ -186,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IPL/ArticleViewController.swift"
-            timestampString = "542862397.271014"
+            timestampString = "542966683.828773"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "parseBlog()"
             landmarkType = "7">
             <Locations>
@@ -202,7 +202,7 @@
                   moduleName = "IPL"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sibaprasad/Iphone%20Dev/IPL/IPL/ArticleViewController.swift"
-                  timestampString = "542862397.277617"
+                  timestampString = "542953891.134053"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "66"
@@ -217,7 +217,55 @@
                   moduleName = "IPL"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sibaprasad/Iphone%20Dev/IPL/IPL/ArticleViewController.swift"
-                  timestampString = "542862397.280152"
+                  timestampString = "542953891.137581"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "21">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "IPL/ArticleViewController.swift"
+            timestampString = "542966683.829239"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "parseBlog()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__ObjC.URLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in IPL.ArticleViewController.parseBlog() -&gt; ()"
+                  moduleName = "IPL"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sibaprasad/Iphone%20Dev/IPL/IPL/ArticleViewController.swift"
+                  timestampString = "542953891.149278"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "3330">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__ObjC.URLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in IPL.ArticleViewController.parseBlog() -&gt; ()"
+                  moduleName = "IPL"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sibaprasad/Iphone%20Dev/IPL/IPL/ArticleViewController.swift"
+                  timestampString = "542953891.152408"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "67"
