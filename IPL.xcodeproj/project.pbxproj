@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		350AB8FC2059CA600021F441 /* Blog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350AB8FB2059CA600021F441 /* Blog.swift */; };
+		354521A9205DEDBB004110EA /* DetailsArticleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354521A8205DEDBB004110EA /* DetailsArticleVC.swift */; };
+		354521B5205DEEEF004110EA /* lion.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 354521AB205DEEEE004110EA /* lion.jpg */; };
+		354521B6205DEEEF004110EA /* panda.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 354521AC205DEEEE004110EA /* panda.jpg */; };
+		354521B7205DEEEF004110EA /* bear.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 354521AD205DEEEE004110EA /* bear.jpeg */; };
+		354521B8205DEEEF004110EA /* ziraf.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 354521AE205DEEEE004110EA /* ziraf.jpeg */; };
+		354521B9205DEEEF004110EA /* puppy.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 354521AF205DEEEE004110EA /* puppy.jpeg */; };
+		354521BA205DEEEF004110EA /* goat.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 354521B0205DEEEE004110EA /* goat.jpeg */; };
+		354521BB205DEEEF004110EA /* rabit.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 354521B1205DEEEE004110EA /* rabit.jpeg */; };
+		354521BC205DEEEF004110EA /* leopard.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 354521B2205DEEEF004110EA /* leopard.jpg */; };
+		354521BD205DEEEF004110EA /* camel.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 354521B3205DEEEF004110EA /* camel.jpeg */; };
+		354521BE205DEEEF004110EA /* zebra.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 354521B4205DEEEF004110EA /* zebra.jpeg */; };
 		356195BF20576FBE00C16BFD /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356195BE20576FBE00C16BFD /* Contacts.swift */; };
 		356195C12057738900C16BFD /* Phone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356195C02057738900C16BFD /* Phone.swift */; };
 		356195C32057773100C16BFD /* MyContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356195C22057773100C16BFD /* MyContacts.swift */; };
@@ -29,6 +40,17 @@
 /* Begin PBXFileReference section */
 		2A5FA642BB4ED2578B24F890 /* Pods-IPL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IPL.release.xcconfig"; path = "Pods/Target Support Files/Pods-IPL/Pods-IPL.release.xcconfig"; sourceTree = "<group>"; };
 		350AB8FB2059CA600021F441 /* Blog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blog.swift; sourceTree = "<group>"; };
+		354521A8205DEDBB004110EA /* DetailsArticleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsArticleVC.swift; sourceTree = "<group>"; };
+		354521AB205DEEEE004110EA /* lion.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lion.jpg; sourceTree = "<group>"; };
+		354521AC205DEEEE004110EA /* panda.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = panda.jpg; sourceTree = "<group>"; };
+		354521AD205DEEEE004110EA /* bear.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bear.jpeg; sourceTree = "<group>"; };
+		354521AE205DEEEE004110EA /* ziraf.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ziraf.jpeg; sourceTree = "<group>"; };
+		354521AF205DEEEE004110EA /* puppy.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = puppy.jpeg; sourceTree = "<group>"; };
+		354521B0205DEEEE004110EA /* goat.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = goat.jpeg; sourceTree = "<group>"; };
+		354521B1205DEEEE004110EA /* rabit.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rabit.jpeg; sourceTree = "<group>"; };
+		354521B2205DEEEF004110EA /* leopard.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = leopard.jpg; sourceTree = "<group>"; };
+		354521B3205DEEEF004110EA /* camel.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = camel.jpeg; sourceTree = "<group>"; };
+		354521B4205DEEEF004110EA /* zebra.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = zebra.jpeg; sourceTree = "<group>"; };
 		356195BE20576FBE00C16BFD /* Contacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
 		356195C02057738900C16BFD /* Phone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phone.swift; sourceTree = "<group>"; };
 		356195C22057773100C16BFD /* MyContacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyContacts.swift; sourceTree = "<group>"; };
@@ -66,8 +88,26 @@
 			isa = PBXGroup;
 			children = (
 				35837F1D205B61EF00468258 /* ArticleViewController.swift */,
+				354521A8205DEDBB004110EA /* DetailsArticleVC.swift */,
 			);
 			name = home;
+			sourceTree = "<group>";
+		};
+		354521AA205DEEBF004110EA /* images */ = {
+			isa = PBXGroup;
+			children = (
+				354521AD205DEEEE004110EA /* bear.jpeg */,
+				354521B3205DEEEF004110EA /* camel.jpeg */,
+				354521B0205DEEEE004110EA /* goat.jpeg */,
+				354521B2205DEEEF004110EA /* leopard.jpg */,
+				354521AB205DEEEE004110EA /* lion.jpg */,
+				354521AC205DEEEE004110EA /* panda.jpg */,
+				354521AF205DEEEE004110EA /* puppy.jpeg */,
+				354521B1205DEEEE004110EA /* rabit.jpeg */,
+				354521B4205DEEEF004110EA /* zebra.jpeg */,
+				354521AE205DEEEE004110EA /* ziraf.jpeg */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 		356195BD20576F6F00C16BFD /* model */ = {
@@ -111,6 +151,7 @@
 		35D956D41E4EDCCF00D2A027 /* IPL */ = {
 			isa = PBXGroup;
 			children = (
+				354521AA205DEEBF004110EA /* images */,
 				35B9B48B2059D596005176F2 /* tableCell */,
 				350AB8FD2059CB350021F441 /* home */,
 				356195BD20576F6F00C16BFD /* model */,
@@ -231,9 +272,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				354521BB205DEEEF004110EA /* rabit.jpeg in Resources */,
+				354521B6205DEEEF004110EA /* panda.jpg in Resources */,
 				35D956E01E4EDCCF00D2A027 /* LaunchScreen.storyboard in Resources */,
+				354521B5205DEEEF004110EA /* lion.jpg in Resources */,
+				354521BD205DEEEF004110EA /* camel.jpeg in Resources */,
+				354521BA205DEEEF004110EA /* goat.jpeg in Resources */,
+				354521BE205DEEEF004110EA /* zebra.jpeg in Resources */,
+				354521B7205DEEEF004110EA /* bear.jpeg in Resources */,
+				354521B9205DEEEF004110EA /* puppy.jpeg in Resources */,
 				35D956DD1E4EDCCF00D2A027 /* Assets.xcassets in Resources */,
+				354521BC205DEEEF004110EA /* leopard.jpg in Resources */,
 				35D956DB1E4EDCCF00D2A027 /* Main.storyboard in Resources */,
+				354521B8205DEEEF004110EA /* ziraf.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +357,7 @@
 				356195C12057738900C16BFD /* Phone.swift in Sources */,
 				35837F1E205B61EF00468258 /* ArticleViewController.swift in Sources */,
 				35D956EE1E4EE12400D2A027 /* ProgressHUD.swift in Sources */,
+				354521A9205DEDBB004110EA /* DetailsArticleVC.swift in Sources */,
 				3578CF7C1E50D7F30058CD1C /* UiViewControllerUtils.swift in Sources */,
 				35D956D61E4EDCCF00D2A027 /* AppDelegate.swift in Sources */,
 				350AB8FC2059CA600021F441 /* Blog.swift in Sources */,

@@ -24,7 +24,7 @@ class LoginViewController: BaseViewController {
     @IBOutlet var textFieldName: UITextField!
     
     var commonutility = CommonUtility()
-    var progressHud : ProgressHUD!
+    
     var myActivityIndicator: UIActivityIndicatorView!
     
     var loginType:Int = 0
@@ -34,17 +34,7 @@ class LoginViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        textFieldName.isHidden = true
-                // Do any additional setupÔ after loading the view, typically from a nib.
-        progressHud  = ProgressHUD(text: "Loading...")
-            //    self.view.addSubview(progressHud)
-        myActivityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
-        myActivityIndicator.center = view.center
-        
-        view.addSubview(myActivityIndicator)
-        
-       
-        
+        showProgressDialog("Loading...")
       //   doNetworkCall(url:"asdasdas")
 //        parse()
 //parseContact()
@@ -171,6 +161,8 @@ class LoginViewController: BaseViewController {
 //        }
 //    }
     func parse(){
+        
+        showProgressDialog("Loading...")
         
         var urlGit = "https://api.github.com/users/spdobest"
         guard let gitUrl = URL(string: "https://api.github.com/users/shashikant86") else { return }

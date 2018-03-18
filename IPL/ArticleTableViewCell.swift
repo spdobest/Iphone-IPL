@@ -10,9 +10,10 @@ import UIKit
 
 class ArticleTableViewCell: UITableViewCell {
     
-    @IBOutlet var myImage: UIImageView!
-    @IBOutlet var labelTitle: UILabel!
-    @IBOutlet var labelDesc: UILabel!
+    @IBOutlet weak var articleImage: UIImageView!
+    @IBOutlet weak var labelTitle: UILabel!
+    @IBOutlet weak var viewCell: UIView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

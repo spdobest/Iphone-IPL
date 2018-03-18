@@ -11,17 +11,27 @@ import Foundation
 import UIKit
 
 class BaseViewController : UIViewController{
-    
+    var progressHud : ProgressHUD!
     override func viewDidLoad() {
+       progressHud  = ProgressHUD(text: "Loading...")
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     func showProgressDialog(_ message : String){
-        var progressHud : ProgressHUD!
-        progressHud  = ProgressHUD(text: message)
+        if(progressHud == nil){
+             progressHud  = ProgressHUD(text: message)
+        }
+        progressHud.setTitle(message: message)
         self.view.addSubview(progressHud)
+        
+    }
+    
+    func hideProgress()  {
+        if(progressHud != nil){
+            progressHud.hide()
+        }
     }
     
     
