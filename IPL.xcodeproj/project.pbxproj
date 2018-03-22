@@ -23,6 +23,7 @@
 		356195C12057738900C16BFD /* Phone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356195C02057738900C16BFD /* Phone.swift */; };
 		356195C32057773100C16BFD /* MyContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356195C22057773100C16BFD /* MyContacts.swift */; };
 		356195C5205781A600C16BFD /* MyGitHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356195C4205781A600C16BFD /* MyGitHub.swift */; };
+		356C818D20643934009E8035 /* MyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356C818C20643934009E8035 /* MyProtocol.swift */; };
 		3578CF7C1E50D7F30058CD1C /* UiViewControllerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3578CF7B1E50D7F30058CD1C /* UiViewControllerUtils.swift */; };
 		35837F1C205B61C100468258 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35837F1B205B61C100468258 /* ArticleTableViewCell.swift */; };
 		35837F1E205B61EF00468258 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35837F1D205B61EF00468258 /* ArticleViewController.swift */; };
@@ -55,6 +56,7 @@
 		356195C02057738900C16BFD /* Phone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phone.swift; sourceTree = "<group>"; };
 		356195C22057773100C16BFD /* MyContacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyContacts.swift; sourceTree = "<group>"; };
 		356195C4205781A600C16BFD /* MyGitHub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGitHub.swift; sourceTree = "<group>"; };
+		356C818C20643934009E8035 /* MyProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProtocol.swift; sourceTree = "<group>"; };
 		3578CF7B1E50D7F30058CD1C /* UiViewControllerUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UiViewControllerUtils.swift; sourceTree = "<group>"; };
 		35837F1B205B61C100468258 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
 		35837F1D205B61EF00468258 /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +124,14 @@
 			name = model;
 			sourceTree = "<group>";
 		};
+		356C818B2064391B009E8035 /* pro */ = {
+			isa = PBXGroup;
+			children = (
+				356C818C20643934009E8035 /* MyProtocol.swift */,
+			);
+			name = pro;
+			sourceTree = "<group>";
+		};
 		35B9B48B2059D596005176F2 /* tableCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +161,7 @@
 		35D956D41E4EDCCF00D2A027 /* IPL */ = {
 			isa = PBXGroup;
 			children = (
+				356C818B2064391B009E8035 /* pro */,
 				354521AA205DEEBF004110EA /* images */,
 				35B9B48B2059D596005176F2 /* tableCell */,
 				350AB8FD2059CB350021F441 /* home */,
@@ -358,6 +369,7 @@
 				35837F1E205B61EF00468258 /* ArticleViewController.swift in Sources */,
 				35D956EE1E4EE12400D2A027 /* ProgressHUD.swift in Sources */,
 				354521A9205DEDBB004110EA /* DetailsArticleVC.swift in Sources */,
+				356C818D20643934009E8035 /* MyProtocol.swift in Sources */,
 				3578CF7C1E50D7F30058CD1C /* UiViewControllerUtils.swift in Sources */,
 				35D956D61E4EDCCF00D2A027 /* AppDelegate.swift in Sources */,
 				350AB8FC2059CA600021F441 /* Blog.swift in Sources */,

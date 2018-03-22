@@ -22,6 +22,7 @@ class ArticleViewController : BaseViewController,UITableViewDataSource {
     override func viewDidLoad() {
         //  labelMessage.text = myValue
       //  view.addSubview(myActivityIndicator)
+        self.myTable.separatorStyle = UITableViewCellSeparatorStyle.none
         imageArray = [#imageLiteral(resourceName: "bear.jpeg"),#imageLiteral(resourceName: "camel.jpeg"),#imageLiteral(resourceName: "goat.jpeg"),#imageLiteral(resourceName: "leopard.jpg"),#imageLiteral(resourceName: "lion.jpg"),#imageLiteral(resourceName: "panda.jpg"),#imageLiteral(resourceName: "puppy.jpeg"),#imageLiteral(resourceName: "puppy.jpeg"),#imageLiteral(resourceName: "rabit.jpeg"),#imageLiteral(resourceName: "zebra.jpeg"),#imageLiteral(resourceName: "ziraf.jpeg")]
         parseBlog()
         
@@ -67,6 +68,7 @@ class ArticleViewController : BaseViewController,UITableViewDataSource {
             }
            //  self.myTable.reloadData()
             DispatchQueue.main.async {
+                self.hideProgress()
                 self.myTable.reloadData()
             }
             
@@ -90,6 +92,7 @@ class ArticleViewController : BaseViewController,UITableViewDataSource {
         cell.viewCell.layer.cornerRadius = cell.viewCell.frame.height/2
         
         if(indexPath.row == articles.count-1){
+            self.showProgressDialog("Loading...")
             parseBlog()
         }
         
@@ -106,8 +109,9 @@ class ArticleViewController : BaseViewController,UITableViewDataSource {
         
         
         dvc.getImage = imageArray[indexPath.row%9]
-        dvc.getName = "Sibaprasad"
-
+        dvc.getName = articles[indexPath.row].title
+        var url = articles[indexPath.row].url.absoluteString
+        dvc.getUrl = url
         self.navigationController?.pushViewController(dvc, animated: true)
     }
     

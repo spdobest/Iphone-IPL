@@ -135,7 +135,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zze-hB-d7c">
-                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="105.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="106"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="redraw" semanticContentAttribute="playback" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="bear.jpeg" highlighted="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gf5-Vs-PxF">
                                                             <rect key="frame" x="0.0" y="8" width="100" height="98"/>
@@ -155,14 +155,11 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="100" id="0EA-88-I5A"/>
                                                         <constraint firstAttribute="bottom" secondItem="uSo-Bn-GdD" secondAttribute="bottom" id="Hxr-Nj-Xni"/>
-                                                        <constraint firstItem="Gf5-Vs-PxF" firstAttribute="top" secondItem="Zze-hB-d7c" secondAttribute="top" id="OwE-h7-b7q"/>
                                                         <constraint firstItem="uSo-Bn-GdD" firstAttribute="top" secondItem="Zze-hB-d7c" secondAttribute="top" id="V9t-Ob-uAE"/>
                                                         <constraint firstItem="uSo-Bn-GdD" firstAttribute="leading" secondItem="Gf5-Vs-PxF" secondAttribute="trailing" id="cS7-tc-nQD"/>
                                                         <constraint firstItem="Gf5-Vs-PxF" firstAttribute="leading" secondItem="Zze-hB-d7c" secondAttribute="leading" id="f7A-Nw-twN"/>
                                                         <constraint firstAttribute="bottom" secondItem="Gf5-Vs-PxF" secondAttribute="bottom" id="iK6-ss-Qb4"/>
                                                         <constraint firstAttribute="trailing" secondItem="Gf5-Vs-PxF" secondAttribute="trailing" constant="243" id="j8h-sK-I2I"/>
-                                                        <constraint firstAttribute="bottom" secondItem="uSo-Bn-GdD" secondAttribute="bottom" constant="40" id="lDl-On-zTk"/>
-                                                        <constraint firstAttribute="trailing" secondItem="uSo-Bn-GdD" secondAttribute="trailing" id="pdO-5e-QhV"/>
                                                         <constraint firstAttribute="trailing" secondItem="uSo-Bn-GdD" secondAttribute="trailing" constant="10" id="qjK-F4-FAo"/>
                                                         <constraint firstItem="uSo-Bn-GdD" firstAttribute="top" secondItem="Zze-hB-d7c" secondAttribute="top" id="svM-2S-SHw"/>
                                                     </constraints>
@@ -207,7 +204,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rTm-H9-Ex8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1736.8" y="-546.47676161919048"/>
+            <point key="canvasLocation" x="1772" y="-696"/>
         </scene>
         <!--Details ArticleVC-->
         <scene sceneID="PxD-iz-pW6">
@@ -221,30 +218,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1sq-ts-okk">
-                                <rect key="frame" x="67" y="179" width="241" height="309"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1sq-ts-okk">
+                                <rect key="frame" x="16" y="30" width="343" height="189.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IKr-iJ-bf9">
-                                <rect key="frame" x="148" y="556" width="60" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IKr-iJ-bf9">
+                                <rect key="frame" x="16" y="239" width="350" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sFf-1f-7VO">
+                                <rect key="frame" x="9" y="279" width="357" height="380"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="IKr-iJ-bf9" firstAttribute="top" secondItem="1sq-ts-okk" secondAttribute="bottom" constant="68" id="GJ5-lg-NKA"/>
-                            <constraint firstItem="1sq-ts-okk" firstAttribute="centerY" secondItem="u0R-1R-YW3" secondAttribute="centerY" id="KdN-9W-Aur"/>
-                            <constraint firstItem="IKr-iJ-bf9" firstAttribute="centerX" secondItem="u0R-1R-YW3" secondAttribute="centerX" id="PNO-wX-6TV"/>
-                            <constraint firstItem="IKr-iJ-bf9" firstAttribute="leading" secondItem="u0R-1R-YW3" secondAttribute="leading" constant="148" id="TFG-no-fsi"/>
-                            <constraint firstItem="1sq-ts-okk" firstAttribute="centerX" secondItem="u0R-1R-YW3" secondAttribute="centerX" id="aBM-Aj-mao"/>
-                            <constraint firstItem="1sq-ts-okk" firstAttribute="leading" secondItem="u0R-1R-YW3" secondAttribute="leadingMargin" constant="51" id="k2o-hG-cu9"/>
-                            <constraint firstItem="1sq-ts-okk" firstAttribute="top" secondItem="fLj-Gq-O7Q" secondAttribute="bottom" constant="159" id="mkT-eO-dvO"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="1sq-ts-okk" id="O4R-bl-KAZ"/>
                         <outlet property="label" destination="IKr-iJ-bf9" id="iDl-Bi-1dE"/>
+                        <outlet property="webview" destination="sFf-1f-7VO" id="eL6-60-RzS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ex-Zz-Adt" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -22,10 +22,13 @@ class BaseViewController : UIViewController{
     func showProgressDialog(_ message : String){
         if(progressHud == nil){
              progressHud  = ProgressHUD(text: message)
+             progressHud.setTitle(message: message)
+            self.view.addSubview(progressHud)
         }
         progressHud.setTitle(message: message)
         self.view.addSubview(progressHud)
         
+        progressHud.show()
     }
     
     func hideProgress()  {

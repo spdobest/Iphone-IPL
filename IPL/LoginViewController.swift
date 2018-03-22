@@ -25,7 +25,7 @@ class LoginViewController: BaseViewController {
     
     var commonutility = CommonUtility()
     
-    var myActivityIndicator: UIActivityIndicatorView!
+    
     
     var loginType:Int = 0
     
@@ -34,7 +34,7 @@ class LoginViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        showProgressDialog("Loading...")
+    
       //   doNetworkCall(url:"asdasdas")
 //        parse()
 //parseContact()
@@ -46,6 +46,9 @@ class LoginViewController: BaseViewController {
     }
     
     @IBAction func onSignInOrSignUpClick(_ sender: AnyObject) {
+        
+        showProgressDialog("Loading...")
+        
         let strEmail:String = textFieldEmail.text!
         let strPwd:String = textFieldsPassword.text!
         let strName:String = textFieldName.text!
